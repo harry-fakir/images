@@ -1,9 +1,5 @@
 <template>
-  <div>
-    Image List
-
-    {{ allImages.length }}
-  </div>
+  <img v-for="image in allImages" v-bind:src="image.link" :key="index" />
 </template>
 
 <script>
