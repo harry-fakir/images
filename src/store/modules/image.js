@@ -21,18 +21,14 @@ const actions = {
     },
 
     async uploadImages({ commit }, images) {
-        const promises = Array.from(images).map(image => {
-            const formData = new FormData();
-            formData.append('image', image);
+        // Get the access token
+        const { token } = rootState.auth;
 
-            return axios.post(`${ROOT_URL}/3/image`, formData, {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            });
-        });
+        // Call our API module to do the upload
+        await api.uploadImages(images, token);
 
-        return Promise.all(promises);
+        // Redirect our user to ImageList component
+        router.push('/');
     },
 
 };
