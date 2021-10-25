@@ -1,5 +1,7 @@
 <template>
-  <img v-for="image in allImages" v-bind:src="image.link" :key="index" />
+  <div>
+    <img v-for="image in allImages" v-bind:src="image.link" :key="image.id" />
+  </div>
 </template>
 
 <script>
