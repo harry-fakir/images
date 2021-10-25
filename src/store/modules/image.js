@@ -9,7 +9,7 @@ const state = {
 
 const getters = {
     allImages: function (state) {
-        state.images
+        return state.images;
     }
 };
 
