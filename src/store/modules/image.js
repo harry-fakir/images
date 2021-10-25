@@ -37,6 +37,7 @@ const actions = {
 const mutations = {
     setImages: function (state, images) {
         state.images = images;
+        console.log(images);
 
     }
 
