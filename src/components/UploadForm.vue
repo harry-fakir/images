@@ -1,13 +1,15 @@
 <template>
   <div class="dropper">
-    <input type="file" />
+    <input type="file" @change="uploadImages" />
     <span>Drag files here</span>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "UploadForm",
+  methods: mapActions(["uploadImages"]),
 };
 </script>
 
@@ -30,6 +32,6 @@ input {
 }
 
 .dropper:hover {
-  background-color: rgb(102, 95, 95);
+  background-color: #eee;
 }
 </style>
