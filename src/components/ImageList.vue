@@ -3,7 +3,7 @@
     <div v-if="isLoggedIn" class="image-container">
       <img v-for="image in allImages" v-bind:src="image.link" :key="image.id" />
     </div>
-    <h2 v-else>Please login to see Images</h2>
+    <h2 v-else>Log In to get started!</h2>
   </div>
 </template>
 
