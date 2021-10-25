@@ -1,6 +1,9 @@
 <template>
   <div>
-    <img v-for="image in allImages" v-bind:src="image.link" :key="image.id" />
+    <div v-if="isLoggedIn" class="image-container">
+      <img v-for="image in allImages" v-bind:src="image.link" :key="image.id" />
+    </div>
+    <h2 v-else>Please login to see Images</h2>
   </div>
 </template>
 
@@ -9,7 +12,7 @@ import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "ImageList",
-  computed: mapGetters(["allImages"]),
+  computed: mapGetters(["allImages", "isLoggedIn"]),
   methods: mapActions(["fetchImages"]),
   created() {
     this.fetchImages();
