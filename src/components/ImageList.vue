@@ -2,7 +2,7 @@
   <div>
     Image List
 
-    {{ allImages.length }}
+    <!-- {{ allImages.length }} -->
   </div>
 </template>
 
