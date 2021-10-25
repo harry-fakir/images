@@ -16,5 +16,15 @@ export default {
   height: 30vh;
   border: 2px dashed black;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  height: 30vh;
+  position: absolute;
 }
 </style>
