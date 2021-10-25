@@ -29,7 +29,7 @@ input {
   opacity: 0;
 }
 
-dropper:hover {
-  background-color: #eee;
+.dropper:hover {
+  background-color: rgb(102, 95, 95);
 }
 </style>
