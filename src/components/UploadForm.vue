@@ -26,5 +26,10 @@ input {
   width: 100%;
   height: 30vh;
   position: absolute;
+  opacity: 0;
+}
+
+dropper:hover {
+  background-color: #eee;
 }
 </style>
